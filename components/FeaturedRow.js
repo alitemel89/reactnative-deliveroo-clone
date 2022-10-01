@@ -2,6 +2,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import React from 'react';
 import { View, Text, ScrollView } from 'react-native';
+import RestaurantCard from './RestaurantCard';
 
 const FeaturedRow = ({ id, title, description }) => {
     return (
@@ -13,12 +14,52 @@ const FeaturedRow = ({ id, title, description }) => {
 
             <Text className="text-xs text-gray-500 px-4">{description}</Text>
             <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            className="pt-4"
+                horizontal
+                contentContainerStyle={{
+                    paddingHorizontal: 15
+                }}
+                showsHorizontalScrollIndicator={false}
+                className="pt-4"
             >
-            {/* Restaurant Cards */}
-            
+                {/* Restaurant Cards */}
+                <RestaurantCard
+                    id={123}
+                    imgUrl={"https://links.papareact.com/gn7"}
+                    title="Yo Sushi!"
+                    rating={4.5}
+                    genre="Japanese"
+                    address="123 Main St"
+                    short_description="This is a test description"
+                    dishes={[]}
+                    long={20}
+                    lat={0}
+                />
+
+                <RestaurantCard
+                    id={123}
+                    imgUrl={"https://links.papareact.com/gn7"}
+                    title="Yo Sushi!"
+                    rating={4.5}
+                    genre="Japanese"
+                    address="123 Main St"
+                    short_description="This is a test description"
+                    dishes={[]}
+                    long={20}
+                    lat={0}
+                />
+
+                <RestaurantCard
+                    id={123}
+                    imgUrl={"https://links.papareact.com/gn7"}
+                    title="Yo Sushi!"
+                    rating={4.5}
+                    genre="Japanese"
+                    address="123 Main St"
+                    short_description="This is a test description"
+                    dishes={[]}
+                    long={20}
+                    lat={0}
+                />
             </ScrollView>
         </View>
     );
