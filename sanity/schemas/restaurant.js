@@ -53,7 +53,7 @@ export default {
       to: [{ type: "category" }]
     },
     {
-      name: "type",
+      name: "dishes",
       title: "Dishes",
       type: "array",
       of: [{ type: "reference", to: [{ type: "dish" }] }]
